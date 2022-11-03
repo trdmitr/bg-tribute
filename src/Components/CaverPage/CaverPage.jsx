@@ -8,6 +8,7 @@ import PlayButton from '../UI/Buttons/PlayButton'
 import Modal from '../UI/Buttons/Modals/Modals'
 import Loader from '../UI/Loader/Loader'
 import About from '../About'
+import Img from '../Img'
 
 const CaverPage = ({songs, songError, isSongsLoading}) => {
     // console.log("songs ", songs)
@@ -17,7 +18,8 @@ const CaverPage = ({songs, songError, isSongsLoading}) => {
         return songs.map((caver) => (
             <div className={classes.col} key={caver.id.toString()} onClick={() => navigate(`/cavers/${caver.id}`)}>
               { isSongsLoading ? <Loader/> : <div className={classes.item}>
-                    <img src={caver.photo} alt={caver.name} />
+                    {/* <img src={caver.photo} alt={caver.name} /> */}
+                    <Img imgUrl={caver.photo} imgAlt={caver.name} />
                 </div>}
                 <p>{caver.name}</p>
             </div>   
@@ -33,15 +35,10 @@ const CaverPage = ({songs, songError, isSongsLoading}) => {
         <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
         <PlayButton onClick={() => setModal(true)}></PlayButton>
         {/* <PlayButton onClick={() => navigate("/playlist")}></PlayButton> */}
-        {/* {isSongsLoading ? <div 
-        style={{display: 'flex', justifyContent: 'center', marginTop: '20em'}}
-            ><Loader/></div> : */}
         <div className={classes.row} >
         {songError && 
-<h1> Ошибка ${songError}</h1>
-}
-        {/* {isSongsLoading ? <Loader /> : singContent} */}
-        
+        <h1> Ошибка ${songError}</h1>
+        }        
             {singContent}
         </div>
     </div>

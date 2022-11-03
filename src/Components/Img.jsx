@@ -1,10 +1,10 @@
 import { useEffect, useState  } from "react"
 import Loader from "./UI/Loader/Loader";
 
-const Img = ({imgUrl}) => {
+const Img = ({imgUrl, imgAlt}) => {
   const [url, setUrl] = useState('');
   useEffect(() => {
-    console.log (imgUrl)
+    // console.log (imgUrl)
     fetch(imgUrl)
       .then(response => response.blob())
       .then((image) => {
@@ -16,6 +16,6 @@ const Img = ({imgUrl}) => {
     return <Loader/>;
   }
       
-  return <img src = {url} alt="Каверы Подземки" />;
+  return <img src = {url} alt={imgAlt}/>;
 }
 export default Img

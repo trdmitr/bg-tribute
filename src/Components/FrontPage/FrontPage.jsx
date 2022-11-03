@@ -8,6 +8,7 @@ import Img from '../Img'
 const FrontPage = () => {
     const navigate = useNavigate();
   const imgUrl = "https://upload.wikimedia.org/wikipedia/commons/4/4d/%D0%91%D0%93.jpg"
+  const imgAlt = "Каверы Подземки"
 
 return (
     <div className={cl.tribute_app}>
@@ -19,7 +20,7 @@ return (
                     <h3>Тройной трибьют!</h3>
                 </div>
                 <div className={classes.front_media}>
-                  <Img imgUrl = {imgUrl}/>
+                  <Img imgUrl = {imgUrl} imgAlt={imgAlt}/>
                     {/* <img src={imUrl} width={80} alt="Каверы Подземки" /> */}
                 </div>
                 <div className={classes.front_body}>
