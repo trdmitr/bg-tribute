@@ -13,7 +13,7 @@
 } */
 * {
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
   /* box-sizing: border-box; */
 }
 
@@ -25,11 +25,12 @@ body {
   --colorHeader: #3B643B;
   --colorText: #74C574;
   --tributeAfterBefore: #ffffff;
+  --titleSongColor: #C44545;
   --searchBackground: #18191f;
   --searchText: #ffffff;
   --searchPlaceHolder: #575a77;
   --playerBackground: #18191f;
-  --titleColor: #ffffff;
+  
   --timeColor: #ffffff;
   --progressSlider: #9440f3;
   --progressUsed: #ffffff;

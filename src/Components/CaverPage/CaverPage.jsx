@@ -33,7 +33,7 @@ const CaverPage = ({songs, songError, isSongsLoading}) => {
         </Modal>
         <IconButtonHome onClick={() => navigate("/")}>Главная</IconButtonHome>
         <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
-        <PlayButton onClick={() => setModal(true)}></PlayButton>
+        <PlayButton onClick={() => setModal(true)}>📌</PlayButton>
         {/* <PlayButton onClick={() => navigate("/playlist")}></PlayButton> */}
         <div className={classes.row} >
         {songError && 

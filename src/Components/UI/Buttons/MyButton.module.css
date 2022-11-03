@@ -14,34 +14,42 @@
 
 .hmBtn {
     position: absolute;
-    top: 103%;
-    left: 11%;
+    top: 104%;
+    left: 22%;
     background-color: var(--tributeAfterBefore);
     border: none; /* Remove borders */
     color: var(--colorText);
-    padding: 2px 6px;
-    font-size: 14px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    border-radius: .5em;
+    transform: translate(-50%, -50%);
+    padding: 5px 15px;
+    color: var(--tributeAfterBefore);
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid var(--tributeAfterBefore);;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .cavBtn {
     position: absolute;
-    top: 103%;
-    left: 67%;
+    top: 104%;
+    left: 78%;
     background-color: var(--tributeAfterBefore);
     border: none; /* Remove borders */
     color: var(--colorText);
-    padding: 2px 6px;
-    font-size: 14px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    border-radius: .5em;
+    transform: translate(-50%, -50%);
+    padding: 5px 15px;
+    color: var(--tributeAfterBefore);;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid var(--tributeAfterBefore);;
+    cursor: pointer;
+    border-radius: 5px;
 }
 .backBtn {
     position: absolute;
     top: -4%;
     left: 20%;
-    background-color: rgb(49, 99, 53); /* Blue background */
+    background-color: rgb(49, 99, 53); 
     border: none; /* Remove borders */
     color: white; /* White text */
     padding: 2px 6px;
@@ -54,7 +62,7 @@
     position: absolute;
     top: 90%;
     left: 63%;
-    background-color: rgb(49, 99, 53); /* Blue background */
+    background-color: var(--tributeAfterBefore);
     border: none; /* Remove borders */
     color: white; /* White text */
     padding: 2px 6px;
@@ -67,12 +75,12 @@
     position: absolute;
     top: -6%;
     left: 83%;
-    background-color: #97901a; /* Blue background */
+    background-color: var(--tributeAfterBefore);
     border: none; /* Remove borders */
     color: white; /* White text */
     padding: 2px 6px;
     font-size: 14px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
     border-radius: .5em;
-    z-index: 101;
+    /* z-index: 101; */
 }
