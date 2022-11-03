@@ -16,9 +16,9 @@
     position: absolute;
     top: 103%;
     left: 11%;
-    background-color: rgb(49, 99, 53); /* Blue background */
+    background-color: var(--tributeAfterBefore);
     border: none; /* Remove borders */
-    color: white; /* White text */
+    color: var(--colorText);
     padding: 2px 6px;
     font-size: 14px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
@@ -29,9 +29,9 @@
     position: absolute;
     top: 103%;
     left: 67%;
-    background-color: rgb(49, 99, 53); /* Blue background */
+    background-color: var(--tributeAfterBefore);
     border: none; /* Remove borders */
-    color: white; /* White text */
+    color: var(--colorText);
     padding: 2px 6px;
     font-size: 14px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
