@@ -9,9 +9,15 @@ import Modal from '../UI/Buttons/Modals/Modals'
 import Loader from '../UI/Loader/Loader'
 import About from '../About'
 import Img from '../Img'
+import Player from '../PlayList/Player'
 
 const CaverPage = ({songs, songError, isSongsLoading}) => {
-    // console.log("songs ", songs)
+    // const [audiosongs, setSongs] = useState([]);
+    console.log("songs ", songs)
+    const {name: fullname, audio1: audio} = songs
+    // const [name, audio1, audio2, audio3,  ...audiosongs] = songs
+    console.log("fullname ", fullname)
+    console.log("audiosongs ", songs)
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
     const singContent = useMemo(() => {
@@ -40,9 +46,11 @@ const CaverPage = ({songs, songError, isSongsLoading}) => {
         <h1> Ошибка ${songError}</h1>
         }        
             {singContent}
-        </div>
+        </div><Player/>
     </div>
+    
 </div>
+
   )
 }
 
