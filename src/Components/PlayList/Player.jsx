@@ -3,7 +3,7 @@ import { useState } from "react";
 import classes from './PlayList.module.css'
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
-const Player = () => {
+const Player = ({audioList}) => {
     const musicTracks = [
         {
           name: "Memories",
@@ -16,18 +16,18 @@ const Player = () => {
         {
           name: "Acoustic Breeze",
           src: "https://www.bensound.com/bensound-music/bensound-acousticbreeze.mp3",
-          src: "https://drive.google.com/uc?export=download&id=1NuhFEzz944Pkn-5JIi8BlU8ldIbO4aCK"
+          src1: "https://drive.google.com/uc?export=download&id=1NuhFEzz944Pkn-5JIi8BlU8ldIbO4aCK"
         }
     ]
     const [trackIndex, setTrackIndex] = useState(0);
     const handleClickPrevious = () => {
         setTrackIndex((currentTrack) =>
-          currentTrack === 0 ? musicTracks.length - 1 : currentTrack - 1
+          currentTrack === 0 ? audioList.length - 1 : currentTrack - 1
         );
       };
       const handleClickNext = () => {
         setTrackIndex((currentTrack) =>
-          currentTrack < musicTracks.length - 1 ? currentTrack + 1 : 0
+          currentTrack < audioList.length - 1 ? currentTrack + 1 : 0
         );
       };
   return (
@@ -39,11 +39,11 @@ const Player = () => {
         style={{ borderRadius: "1rem" }}
         // autoPlay
         // layout="horizontal"
-        src={musicTracks[trackIndex].src}
+        src={audioList[trackIndex].src}
         // onPlay={(e) => console.log("onPlay")}
         showSkipControls={true}
         showJumpControls={false}
-        header={`Сейчас играет: ${musicTracks[trackIndex].name}`}
+        header={`Сейчас играет: ${audioList[trackIndex].name}`}
         // footer="All music from: www.bensound.com"
         onClickPrevious={handleClickPrevious}
         onClickNext={handleClickNext}

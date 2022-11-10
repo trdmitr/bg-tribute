@@ -12,12 +12,41 @@ import Img from '../Img'
 import Player from '../PlayList/Player'
 
 const CaverPage = ({songs, songError, isSongsLoading}) => {
-    // const [audiosongs, setSongs] = useState([]);
-    console.log("songs ", songs)
-    const {name: fullname, audio1: audio} = songs
-    // const [name, audio1, audio2, audio3,  ...audiosongs] = songs
-    console.log("fullname ", fullname)
-    console.log("audiosongs ", songs)
+    // console.log("songs ", songs)
+
+    const audiosongs1 = songs.map((song) => {
+        const container = {};
+         container.name = song.name;
+         container.src= song.audio1;
+        //  container.audio2= song.audio2 || 0;
+        //  container.audio3= song.audio3 || 0;
+        return container;
+    }
+    )
+    const audiosongs2 = songs.map((song) => {
+        const container = {};
+         container.name = song.name;
+         container.src = song.audio2;
+        //  container.audio2= song.audio2 || 0;
+        //  container.audio3= song.audio3 || 0;
+        return container;
+    }
+    )
+    const audiosongs3 = songs.map((song) => {
+        const container = {};
+         container.name = song.name;
+         container.src = song.audio3;
+        //  container.audio2= song.audio2 || 0;
+        //  container.audio3= song.audio3 || 0;
+        return container;
+    }
+    )
+ const audioList = [...audiosongs1, ...audiosongs2, ...audiosongs3]
+ .filter(e => e.src !== '');
+
+//  console.log("audiolist", audioList)
+
+    
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
     const singContent = useMemo(() => {
@@ -46,7 +75,7 @@ const CaverPage = ({songs, songError, isSongsLoading}) => {
         <h1> Ошибка ${songError}</h1>
         }        
             {singContent}
-        </div><Player/>
+        </div><Player audioList={audioList}/>
     </div>
     
 </div>
