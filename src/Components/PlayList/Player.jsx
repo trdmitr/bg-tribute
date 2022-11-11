@@ -3,7 +3,7 @@ import { useState } from "react";
 import classes from './PlayList.module.css'
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
-const Player = ({audioList}) => {
+const Player = ({songs}) => {
     const musicTracks = [
         {
           name: "Memories",
@@ -19,6 +19,36 @@ const Player = ({audioList}) => {
           src1: "https://drive.google.com/uc?export=download&id=1NuhFEzz944Pkn-5JIi8BlU8ldIbO4aCK"
         }
     ]
+    const audiosongs1 = songs.map((song) => {
+        const container = {};
+         container.name = song.name;
+         container.src= song.audio1;
+        //  container.audio2= song.audio2 || 0;
+        //  container.audio3= song.audio3 || 0;
+        return container;
+    }
+    )
+    const audiosongs2 = songs.map((song) => {
+        const container = {};
+         container.name = song.name;
+         container.src = song.audio2;
+        //  container.audio2= song.audio2 || 0;
+        //  container.audio3= song.audio3 || 0;
+        return container;
+    }
+    )
+    const audiosongs3 = songs.map((song) => {
+        const container = {};
+         container.name = song.name;
+         container.src = song.audio3;
+        //  container.audio2= song.audio2 || 0;
+        //  container.audio3= song.audio3 || 0;
+        return container;
+    }
+    )
+ const audioList = [...audiosongs1, ...audiosongs2, ...audiosongs3]
+ .filter(e => e.src !== '');
+ 
     const [trackIndex, setTrackIndex] = useState(0);
     const handleClickPrevious = () => {
         setTrackIndex((currentTrack) =>

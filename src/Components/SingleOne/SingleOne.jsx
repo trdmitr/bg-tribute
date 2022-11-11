@@ -7,8 +7,6 @@ import cl from '../UI/Pub.module.css'
 import CaverButton from '../UI/Buttons/CaverButton'
 import IconButtonHome from '../UI/Buttons/IconButtonHome'
 import BackButton from '../UI/Buttons/MyButton';
-import PlayButton from '../UI/Buttons/PlayButton';
-import YoutButton from '../UI/Buttons/YoutButton';
 
 const SingleOne = ({ songs } ) => {
   const navigate = useNavigate();
@@ -25,8 +23,7 @@ const listContent = useMemo(() => {
     <img className={classes.mediaImage} src={currSing.photo} width={80} alt={currSing.name} />
     <div className= {classes.headerSong}>
 <h2>{currSing.name}</h2></div>
-<a className={classes.linkTo}  href={currSing.link} target="_blank"> Канал исполнителя </a>
-{/* <Link reloadDocument className={classes.linkTo} to={currSing.link}>Канал исполнителя </Link> */}
+<a className={classes.linkTo}  href={currSing.link} target="_blank" rel="noopener noreferrer"> Канал исполнителя </a>
 <div className = {[
 classes.audioBlock,
 currSing.audio1 ? '' : classes.mediaHidden].join(' ')
