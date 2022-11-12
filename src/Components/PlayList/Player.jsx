@@ -1,24 +1,10 @@
 import React from 'react'
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import classes from './PlayList.module.css'
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 const Player = ({songs}) => {
-    const musicTracks = [
-        {
-          name: "Memories",
-          src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
-        },
-        {
-          name: "Creative Minds",
-          src: "https://drive.google.com/uc?export=download&id=17A1Pdk7cHrYlT79ISQYdFUxkjqHfq1Su"
-        },
-        {
-          name: "Acoustic Breeze",
-          src: "https://www.bensound.com/bensound-music/bensound-acousticbreeze.mp3",
-          src1: "https://drive.google.com/uc?export=download&id=1NuhFEzz944Pkn-5JIi8BlU8ldIbO4aCK"
-        }
-    ]
+   
     const audiosongs1 = songs.map((song) => {
         const container = {};
          container.name = song.name;
@@ -46,8 +32,13 @@ const Player = ({songs}) => {
         return container;
     }
     )
- const audioList = [...audiosongs1, ...audiosongs2, ...audiosongs3]
+    
+        const audioList = useMemo (() => {
+ return [...audiosongs1, ...audiosongs2, ...audiosongs3]
  .filter(e => e.src !== '');
+ console.log(audioList)
+    }, [])
+ 
  
     const [trackIndex, setTrackIndex] = useState(0);
     const handleClickPrevious = () => {
