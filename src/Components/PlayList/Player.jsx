@@ -2,13 +2,13 @@ import React from 'react'
 import { useState, useMemo } from "react";
 import classes from './PlayList.module.css'
 import AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
+// import "react-h5-audio-player/lib/styles.css";
 const Player = ({songs}) => {
-   
+    const audioList = useMemo (() => {
     const audiosongs1 = songs.map((song) => {
         const container = {};
          container.name = song.name;
-         container.src= song.audio1;
+         container.audio= song.audio1;
         //  container.audio2= song.audio2 || 0;
         //  container.audio3= song.audio3 || 0;
         return container;
@@ -17,7 +17,7 @@ const Player = ({songs}) => {
     const audiosongs2 = songs.map((song) => {
         const container = {};
          container.name = song.name;
-         container.src = song.audio2;
+         container.audio = song.audio2;
         //  container.audio2= song.audio2 || 0;
         //  container.audio3= song.audio3 || 0;
         return container;
@@ -26,20 +26,20 @@ const Player = ({songs}) => {
     const audiosongs3 = songs.map((song) => {
         const container = {};
          container.name = song.name;
-         container.src = song.audio3;
+         container.audio = song.audio3;
         //  container.audio2= song.audio2 || 0;
         //  container.audio3= song.audio3 || 0;
         return container;
     }
     )
     
-        const audioList = useMemo (() => {
+       
  return [...audiosongs1, ...audiosongs2, ...audiosongs3]
- .filter(e => e.src !== '');
- console.log(audioList)
-    }, [])
+ .filter(e => e.audio !== '');
  
+    }, [songs])
  
+//  console.log(audioList)
     const [trackIndex, setTrackIndex] = useState(0);
     const handleClickPrevious = () => {
         setTrackIndex((currentTrack) =>
@@ -60,7 +60,7 @@ const Player = ({songs}) => {
         style={{ borderRadius: "1rem" }}
         // autoPlay
         // layout="horizontal"
-        src={audioList[trackIndex].src}
+        src={audioList[trackIndex].audio}
         // onPlay={(e) => console.log("onPlay")}
         showSkipControls={true}
         showJumpControls={false}

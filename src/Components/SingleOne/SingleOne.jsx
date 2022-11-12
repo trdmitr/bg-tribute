@@ -12,6 +12,7 @@ const SingleOne = ({ songs } ) => {
   const navigate = useNavigate();
   const params = useParams(); 
 
+
   const currSings = useMemo(() => {
     return songs.filter(songs => songs.id == params.id);
   
