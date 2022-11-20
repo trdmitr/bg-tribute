@@ -7,7 +7,7 @@ import Img from '../Img'
 
 const FrontPage = () => {
     const navigate = useNavigate();
-  const imgUrl = "https://upload.wikimedia.org/wikipedia/commons/4/4d/%D0%91%D0%93.jpg"
+  const imgUrl = "https://sun9-86.userapi.com/impg/kHPddrPRQ_-sEHyq9aynQWRmU1EaQNx4HIDO2g/9Hj53TPJW34.jpg?size=1999x2160&quality=95&sign=e89b27e1119dec086e759f57a67cd375&type=album"
   const imgAlt = "Каверы Подземки"
 
 return (
@@ -17,7 +17,7 @@ return (
         <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
         {/* <PlayButton  onClick={() => navigate("/playlist")}></PlayButton> */}
         <div className={classes.front_header}>
-                    <h3>Тройной трибьют!</h3>
+                    <h3></h3>
                 </div>
                 <div className={classes.front_media}>
                   <Img imgUrl = {imgUrl} imgAlt={imgAlt}/>
