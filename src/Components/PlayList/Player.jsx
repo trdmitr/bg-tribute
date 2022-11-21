@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useMemo } from "react";
 import classes from './PlayList.module.css'
 import AudioPlayer from "react-h5-audio-player";
-// import "react-h5-audio-player/lib/styles.css";
+import "react-h5-audio-player/lib/styles.css";
 const Player = ({songs}) => {
     const audioList = useMemo (() => {
     const audiosongs1 = songs.map((song) => {
@@ -39,16 +39,18 @@ const Player = ({songs}) => {
  
     }, [songs])
  
-//  console.log(audioList)
-    const [trackIndex, setTrackIndex] = useState(0);
+ console.log("audioList", audioList)
+ const oneSing = Array.from(audioList);
+  console.log("oneSing", oneSing)
+    const [trackIndex, setTrackIndex] = useState();
     const handleClickPrevious = () => {
         setTrackIndex((currentTrack) =>
-          currentTrack === 0 ? audioList.length - 1 : currentTrack - 1
+          currentTrack === 0 ? oneSing.length - 1 : currentTrack - 1
         );
       };
       const handleClickNext = () => {
         setTrackIndex((currentTrack) =>
-          currentTrack < audioList.length - 1 ? currentTrack + 1 : 0
+          currentTrack < oneSing.length - 1 ? currentTrack + 1 : 0
         );
       };
   return (
@@ -60,11 +62,11 @@ const Player = ({songs}) => {
         style={{ borderRadius: "1rem" }}
         // autoPlay
         // layout="horizontal"
-        src={audioList[trackIndex].audio}
-        // onPlay={(e) => console.log("onPlay")}
+        // src={oneSing[trackIndex].audio}
+        onPlay={(e) => console.log(trackIndex)}
         showSkipControls={true}
         showJumpControls={false}
-        header={`Сейчас играет: ${audioList[trackIndex].name}`}
+        // header={`Сейчас играет: ${oneSing[trackIndex].name}`}
         // footer="All music from: www.bensound.com"
         onClickPrevious={handleClickPrevious}
         onClickNext={handleClickNext}

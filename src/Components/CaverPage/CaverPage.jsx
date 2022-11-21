@@ -12,7 +12,7 @@ import Img from '../Img'
 import Player from '../PlayList/Player'
 
 const CaverPage = ({songs, songError, isSongsLoading}) => {
-    // console.log("songs ", songs)
+    console.log("songs ", songs)
 
     
 
@@ -47,7 +47,9 @@ const CaverPage = ({songs, songError, isSongsLoading}) => {
         <h1> Ошибка ${songError}</h1>
         }        
             {singContent}
+            <a className={classes.linkTo}  href="https://trdmitr.github.io/alltributes/#/" target="_blank" rel="noopener noreferrer"> Все трибьюты </a>
         </div><Player songs={songs}/>
+        
     </div>
     
 </div>

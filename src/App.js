@@ -8,6 +8,7 @@ import AxiosService from './Components/API/AxiosService'
 import {useFetching} from './Components/Hooks/useFetchig'
 import SingleOne from './Components/SingleOne/SingleOne';
 // import PlayList from './Components/PlayList/PlayList';
+import Player from './Components/PlayList/Player'
 function NotFound() {
   return <h2>Ресурс не найден</h2>;
 }
