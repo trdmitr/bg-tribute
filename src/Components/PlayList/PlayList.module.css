@@ -21,6 +21,7 @@
   }
 
   #rap_container {
+    border-radius: 0% !important;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -28,6 +29,6 @@
     font-family: inherit;
     width: 100%;
     padding: 10px 15px;
-    background-color: rgb(73, 110, 51);
+    background-color: rgb(65 137 143);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
   }

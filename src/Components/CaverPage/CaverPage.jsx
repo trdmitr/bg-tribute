@@ -11,50 +11,41 @@ import About from '../About'
 import Img from '../Img'
 import Player from '../PlayList/Player'
 
-const CaverPage = ({songs, songError, isSongsLoading}) => {
-    console.log("songs ", songs)
-
-    
-
-//  console.log("audiolist", audioList)
-
-    
+const CaverPage = ({ songs, songError, isSongsLoading }) => {
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
     const singContent = useMemo(() => {
         return songs.map((caver) => (
             <div className={classes.col} key={caver.id.toString()} onClick={() => navigate(`/cavers/${caver.id}`)}>
-              { isSongsLoading ? <Loader/> : <div className={classes.item}>
+                {isSongsLoading ? <Loader /> : <div className={classes.item}>
                     {/* <img src={caver.photo} alt={caver.name} /> */}
                     <Img imgUrl={caver.photo} imgAlt={caver.name} />
                 </div>}
                 <p>{caver.name}</p>
-            </div>   
+            </div>
         ))
     }, [songs])
-  return (
-    <div className={cl.tribute_app}>
-    <div className={classes.content}>
-        <Modal visible={modal} setVisible={setModal}>
-            <About />
-        </Modal>
-        <IconButtonHome onClick={() => navigate("/")}>Главная</IconButtonHome>
-        <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
-        <PlayButton onClick={() => setModal(true)}>📌</PlayButton>
-        {/* <PlayButton onClick={() => navigate("/playlist")}></PlayButton> */}
-        <div className={classes.row} >
-        {songError && 
-        <h1> Ошибка ${songError}</h1>
-        }        
-            {singContent}
-            <a className={classes.linkTo}  href="https://trdmitr.github.io/alltributes/#/" target="_blank" rel="noopener noreferrer"> Все трибьюты </a>
-        </div><Player songs={songs}/>
-        
-    </div>
-    
-</div>
+    return (
+        <div className={cl.tribute_app}>
+            <div className={classes.content}>
+                <Modal visible={modal} setVisible={setModal}>
+                    <About />
+                </Modal>
+                <IconButtonHome onClick={() => navigate("/")}>Главная</IconButtonHome>
+                <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
+                <PlayButton onClick={() => setModal(true)}>📌</PlayButton>
+                {/* <PlayButton onClick={() => navigate("/playlist")}></PlayButton> */}
+                <div className={classes.row} >
+                    {songError &&
+                        <h1> Ошибка ${songError}</h1>
+                    }
+                    {singContent}
+                    <a className={classes.linkTo} href="https://trdmitr.github.io/alltributes/#/" target="_blank" rel="noopener noreferrer"> Все трибьюты </a>
+                </div><Player songs={songs} />
+            </div>
+        </div>
 
-  )
+    )
 }
 
 export default CaverPage
