@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { useParams } from "react-router";
 import classes from './SingleOne.module.css'
 import {  useNavigate } from 'react-router-dom'
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
 import cl from '../UI/Pub.module.css'
 import CaverButton from '../UI/Buttons/CaverButton'
 import IconButtonHome from '../UI/Buttons/IconButtonHome'
@@ -47,12 +47,15 @@ classes.videoBlock,
 currSing.video1 ? '' : classes.mediaHidden].join(' ')
 }>
 <p>{currSing.video_name1}</p>
-<ReactPlayer className={currSing.video1 ? '': classes.mediaHidden}
-id= {classes.videoFrame} url = {currSing.video1} controls={true} />
+{/* <ReactPlayer className={currSing.video1 ? '': classes.mediaHidden}
+id= {classes.videoFrame} url = {currSing.video1} id= {classes.videoFrame}  /> */}
+<video className={currSing.video1 ? '': classes.mediaHidden} src={currSing.video1} id= {classes.videoFrame} controls={true} ></video>
 <p>{currSing.video_name2}</p>
-<ReactPlayer className={currSing.video2 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video2}  controls={true} />
+{/* <ReactPlayer className={currSing.video2 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video2}  controls={true} /> */}
+<video className={currSing.video2 ? '': classes.mediaHidden} src={currSing.video2} id = {classes.videoFrame} controls={true} ></video>
 <p>{currSing.video_name3}</p>
-<ReactPlayer className={currSing.video3 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video3} controls={true} />
+{/* <ReactPlayer className={currSing.video3 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video3} controls={true} /> */}
+{/* <video className={currSing.video3 ? '': classes.mediaHidden} src={currSing.video3} id = {classes.videoFrame} controls={true} ></video> */}
 </div> 
 
 </div>);
