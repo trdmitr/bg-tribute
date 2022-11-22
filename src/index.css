@@ -1,7 +1,20 @@
-/* @import url(https://allfont.ru/allfont.css?fonts=cassandra); */
+/* @import url('https://fonts.cdnfonts.com/css/cassandra-personal-use'); */
+@font-face {
+	font-family: "Cassandra";
+	src: url(./fonts/cassandra/cassandra.eot);
+	src: url("./fonts/cassandra/cassandra.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("./fonts/cassandra/cassandra.otf") format("opentype"), /* Open Type Font */
+		url("./fonts/cassandra/cassandra.svg") format("svg"), /* Legacy iOS */
+		url("./fonts/cassandra/cassandra.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("./fonts/cassandra/cassandra.woff") format("woff"), /* Modern Browsers */
+		url("./fonts/cassandra/cassandra.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
 body {
   margin: 0;
- font-family: 'Cassandra', arial
+  font-family: "Cassandra", sans-serif;
+                                                
 }
 
 /* code {

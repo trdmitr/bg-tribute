@@ -1,7 +1,7 @@
 .tribute_app {
     position: relative;
     width: 32rem;
-    height: 64rem;
+    height: 61rem;
     margin: auto;
     border: 16px #000 solid;
     border-top-width: 60px;
@@ -9,6 +9,12 @@
     border-radius: 36px;
     box-sizing: inherit;
   }
+  @media (min-width: 575.98px) { 
+    .content {  
+    height: 48rem;
+    width: 32rem
+  } 
+}
   .tribute_app:before {
     content: '';
     display: block;

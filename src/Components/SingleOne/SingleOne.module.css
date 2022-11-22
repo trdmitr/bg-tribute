@@ -3,7 +3,9 @@
 }
 
 .mediaSong {
-
+  font-family: "Cassandra";
+	font-size: 1rem;
+	font-weight: normal;
     display: flex;
     flex: 1 1 auto;
     justify-content: center;

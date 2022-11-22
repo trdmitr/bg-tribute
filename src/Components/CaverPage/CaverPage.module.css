@@ -1,7 +1,7 @@
 .content {
     padding: 1px;
     width: 32rem;
-    height: 64rem;
+    height: 61rem;
     overflow-y: scroll;
     scrollbar-width: none;
     background-color: var( --colorBackgroundAll);
@@ -15,7 +15,16 @@
   .content h1 {
     margin-left: 10px;
   }
+  @media (min-width: 575.98px) { 
+    .content {  
+    height: 48rem;
+    width: 32rem
+  } 
+}
   .row {
+    font-family: "Cassandra";
+	font-size: 1rem;
+	font-weight: normal;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

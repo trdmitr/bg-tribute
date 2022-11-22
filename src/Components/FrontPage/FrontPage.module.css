@@ -1,7 +1,7 @@
 .content {
     padding: 1px;
     width: 32rem;
-    height: 64rem;
+    height: 61rem;
     overflow-y: scroll;
     scrollbar-width: none;
     background-color: #8fcf63;
@@ -15,6 +15,13 @@
   .content h1 {
     margin-left: 10px;
   }
+
+   @media (min-width: 575.98px) { 
+    .content {  
+    height: 48rem;
+    width: 32rem
+  } 
+}
   .front_header {
     width: 277px;
     font-size: 3em;
@@ -59,8 +66,11 @@
   }
 
   .front_body span {
+    font-family: "Cassandra";
+	font-size: 1rem;
+	font-weight: normal;
     padding: 0.5em;
-    color: #000;
+    color: rgb(173, 12, 12);
     background-color: #97901a;
     font-size: 3em;
     text-align:center;
