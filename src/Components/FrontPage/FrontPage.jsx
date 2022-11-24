@@ -17,14 +17,14 @@ return (
         <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
         {/* <PlayButton  onClick={() => navigate("/playlist")}></PlayButton> */}
         <div className={classes.front_header}>
-                    <h3></h3>
+                    <p>🎸🎸🎸🎧🎧🎸🎸🎸</p>
                 </div>
                 <div className={classes.front_media}>
                   <Img imgUrl = {imgUrl} imgAlt={imgAlt}/>
                     {/* <img src={imUrl} width={80} alt="Каверы Подземки" /> */}
                 </div>
                 <div className={classes.front_body}>
-                    <span>С ДНЁМ РОЖДЕНИЯ ПРЕКРАСНЫХ ИСПОЛНИТЕЛЕЙ! 🤘🏻🤘🏻🤘🏻 </span>
+                    <span>Я увидел тебя и подумал: Как редко встречаешь своих... </span>
                 </div>
       </div>
     </div>

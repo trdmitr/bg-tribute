@@ -33,11 +33,11 @@ body {
   background-color: #151616;
 }
 :root {
-  --colorBackgroundAll: #3B643B;
+  --colorBackgroundAll: #797539B8;
   --colorHeader: #3B643B;
-  --colorText: #74C574;
-  --tributeAfterBefore: #ffffff;
-  --titleSongColor: #C44545;
+  --colorText: rgb(173, 19, 19);
+  --tributeAfterBefore: hsl(0, 0%, 70%);
+  --titleSongColor: #7FC8EC;
   --searchBackground: #18191f;
   --searchText: #ffffff;
   --searchPlaceHolder: #575a77;

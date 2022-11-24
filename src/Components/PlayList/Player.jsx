@@ -5,6 +5,13 @@ import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { useEffect } from 'react';
 const Player = ({songs}) => {
+  // var tags = ['audio', 'animal']
+  // songs.filter(song => {
+  //   const itemTags = song.tags.split(', '); 
+  //   return tags.every(t => itemTags.includes('audio')); 
+  // }); 
+  const oneSing = songs.every(elem => elem.length >>> 0);
+
     const audioList = useMemo (() => {
     const audiosongs1 = songs.map((song) => {
         const container = {};
@@ -41,12 +48,12 @@ const Player = ({songs}) => {
     }, [])
  
  console.log("audioList", audioList)
- const oneSing =  useEffect(() => {
-  Array.from(audioList);
-  console.log("oneSing", oneSing)
-}, [])
+//  const oneSing =  useEffect(() => {
+//   Array.from(audioList);
+//   // console.log("oneSing", oneSing)
+// }, [])
  
-  
+console.log("oneSing", oneSing)
 
   const musicTracks = [
     {
@@ -64,6 +71,8 @@ const Player = ({songs}) => {
     }
 ]
 console.log("musicTracks ", musicTracks)
+
+
 const [trackIndex, setTrackIndex] = useState(0);
     const handleClickPrevious = () => {
         setTrackIndex((currentTrack) =>

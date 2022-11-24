@@ -16,7 +16,7 @@
     margin-left: 10px;
   }
   .player {
-    background-color: aqua !important;
+    background-color: rgba(0, 255, 255, 0.199) !important;
     text-align: center;
   }
 

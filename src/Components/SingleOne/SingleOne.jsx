@@ -17,7 +17,7 @@ const SingleOne = ({ songs } ) => {
     return songs.filter(songs => songs.id == params.id);
   
 }, [songs])
-
+console.log("currSings ", currSings)
 const listContent = useMemo(() => {         
   return  currSings.map((currSing) =>   
  <div className={classes.mediaSong} key={currSing.id}> 
@@ -39,9 +39,6 @@ currSing.audio1 ? '' : classes.mediaHidden].join(' ')
 <audio controls className={currSing.audio3 ? '': classes.mediaHidden}
   source src={currSing.audio3} type="audio/mpeg" />  
 </div>
-<div>
-<img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты Пикник"/>
-</div>
 <div className = {[
 classes.videoBlock,
 currSing.video1 ? '' : classes.mediaHidden].join(' ')
@@ -57,7 +54,9 @@ id= {classes.videoFrame} url = {currSing.video1} id= {classes.videoFrame}  /> */
 {/* <ReactPlayer className={currSing.video3 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video3} controls={true} /> */}
 {/* <video className={currSing.video3 ? '': classes.mediaHidden} src={currSing.video3} id = {classes.videoFrame} controls={true} ></video> */}
 </div> 
-
+<div>
+<img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты Пикник"/>
+</div>
 </div>);
 }, [currSings])
 
