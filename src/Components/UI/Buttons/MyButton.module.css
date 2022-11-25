@@ -8,6 +8,9 @@
     font-size: 14px;
     background: transparent;
     border: 1px solid var( --tributeAfterBefore);
+    text-shadow: var(--backGRound);
+    box-shadow: var(--boxShadow);
+  
     cursor: pointer;
     border-radius: 5px;
 }
@@ -27,6 +30,9 @@
     border: 1px solid var(--tributeAfterBefore);;
     cursor: pointer;
     border-radius: 5px;
+    text-shadow: var(--backGRound);
+    box-shadow: var(--boxShadow);
+  
 }
 
 .cavBtn {
@@ -44,6 +50,9 @@
     border: 1px solid var(--tributeAfterBefore);;
     cursor: pointer;
     border-radius: 5px;
+    text-shadow: var(--backGRound);
+    box-shadow: var(--boxShadow);
+  
 }
 .backBtn {
     position: absolute;

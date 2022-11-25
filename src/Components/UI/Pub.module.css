@@ -8,6 +8,7 @@
     border-bottom-width: 60px;
     border-radius: 36px;
     box-sizing: inherit;
+    
   }
   @media (max-width: 575.98px) { 
     .content {  
@@ -28,6 +29,9 @@
     /* выравнивание по центру */
     background: var(--tributeAfterBefore);
     border-radius: 10px;
+    text-shadow: var(--backGRound);
+    box-shadow: var(--boxShadow);
+  
   }
   
   .tribute_app:after {
@@ -41,6 +45,9 @@
     transform: translate(-50%, -50%);
     background: var(--tributeAfterBefore);
     border-radius: 50%;
+    text-shadow: var(--backGRound);
+    box-shadow: var(--boxShadow);
+  
   }
   .content {
     padding: 1px;

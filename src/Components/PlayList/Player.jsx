@@ -47,13 +47,17 @@ const Player = ({songs}) => {
  
     }, [])
  
- console.log("audioList", audioList)
+//  console.log("audioList", audioList)
 //  const oneSing =  useEffect(() => {
 //   Array.from(audioList);
 //   // console.log("oneSing", oneSing)
 // }, [])
- 
-console.log("oneSing", oneSing)
+const mapUsersByFields = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
+  u2[f1] = u1[f1];
+  return u2;
+}, {}));
+console.log(mapUsersByFields(["name", "audio1", "audio2", "audio3"]));
+
 
   const musicTracks = [
     {

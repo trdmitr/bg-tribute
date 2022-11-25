@@ -46,15 +46,17 @@ currSing.video1 ? '' : classes.mediaHidden].join(' ')
 <p>{currSing.video_name1}</p>
 {/* <ReactPlayer className={currSing.video1 ? '': classes.mediaHidden}
 id= {classes.videoFrame} url = {currSing.video1} id= {classes.videoFrame}  /> */}
-<video className={currSing.video1 ? '': classes.mediaHidden} src={currSing.video1} id= {classes.videoFrame} controls={true} ></video>
+<video className={currSing.video1 ? '': classes.mediaHidden} src={currSing.video1} id= {classes.videoFrame} controls={true} type="video/mp4" ></video>
 <p>{currSing.video_name2}</p>
 {/* <ReactPlayer className={currSing.video2 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video2}  controls={true} /> */}
-<video className={currSing.video2 ? '': classes.mediaHidden} src={currSing.video2} id = {classes.videoFrame} controls={true} ></video>
-<p>{currSing.video_name3}</p>
+<video className={currSing.video2 ? '': classes.mediaHidden} src={currSing.video2} id = {classes.videoFrame} controls={true} type="video/mp4" ></video>
+<p>{currSing.video_name2}</p>
 {/* <ReactPlayer className={currSing.video3 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video3} controls={true} /> */}
 {/* <video className={currSing.video3 ? '': classes.mediaHidden} src={currSing.video3} id = {classes.videoFrame} controls={true} ></video> */}
+<video className={currSing.video3 ? '': classes.mediaHidden} src={currSing.video3} id = {classes.videoFrame} controls={true} type="video/mp4" ></video>
+<p>{currSing.video_name3}</p>
 </div> 
-<div>
+<div className={currSing.picture_tzitata ? '': classes.mediaHidden} >
 <img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты Пикник"/>
 </div>
 </div>);

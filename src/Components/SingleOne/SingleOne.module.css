@@ -51,6 +51,10 @@
   color: var(--titleSongColor);
   background-color: var(--colorBackgroundAll);
   border-radius: 0.5rem;
+  border: 2px solid var(--titleSongColor);
+  border-bottom: 4px solid #b2b1b1;
+  text-shadow: -1px -1.6px 0px #9440f3;
+  box-shadow: var(--boxShadow);
 }
 
 .linkTo {
@@ -79,6 +83,8 @@
   /* padding: 2px 6px; */
   background-color: var(--tributeAfterBefore);
   border-radius: 0.5em;
+  text-shadow: var(--textShadow);
+  box-shadow: var(--boxShadow);
 }
 
 .videoBlock>p {
@@ -88,6 +94,8 @@
   color: var(--colorText);
   background-color: var(--tributeAfterBefore);
   border-radius: 0.5em;
+  text-shadow: var(--textShadow);
+  box-shadow: var(--boxShadow);
 }
 
 .videoBlock {
@@ -110,7 +118,10 @@
 
 audio::-webkit-media-controls-enclosure {
 
-  background-color: #500b85ca;
+  background-color: var(--titleSongColor);
+  text-shadow: -1px -1.6px 0px #9440f3;
+  box-shadow: var(--boxShadow);
+
 }
 
 .tziImage {

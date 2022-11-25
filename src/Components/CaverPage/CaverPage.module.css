@@ -25,6 +25,8 @@ background-size: cover;
   .content h1 {
     margin-left: 10px;
     color: var( --colorText);
+    text-shadow: var(--textShadow);
+    /* box-shadow: var(--boxShadow); */
   }
   @media (max-width: 575.98px) { 
     .content {  
@@ -57,6 +59,7 @@ background-size: cover;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 50%;
+    
   }
    
   .item:hover {
@@ -121,6 +124,8 @@ background-size: cover;
       left: 6px;
       width: 100%;
       border-radius: 0.5em;
+      text-shadow: var(--textShadow);
+      box-shadow: var(--boxShadow);
   }
   }
   .linkTo {
@@ -133,6 +138,8 @@ background-size: cover;
     border: 2px solid var( --colorText);
     border-radius: 8px;
     text-decoration: none;
+    text-shadow: var(--textShadow);
+    box-shadow: var(--boxShadow);
      }
      .linkTo:hover {
         box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3), 0 5px 21px 0 rgba(0,0,0,0.18);
