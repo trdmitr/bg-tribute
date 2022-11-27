@@ -100,7 +100,12 @@ background-size: cover;
       /* margin-right: 0px; */
       /* width: 130px; */
       height: 130px;
-      border-radius: 70px;
+      /* border-radius: 70px; */
+      box-shadow: 10px 10px 10px 0px rgba(98, 119, 136, 0.2);
+      /* -webkit-box-shadow: 1px -4px 80px 22px rgba(31, 144, 231, 0.12);
+      -moz-box-shadow: 1px -4px 80px 22px rgba(31, 144, 231, 0.12);
+      box-shadow: 1px -4px 80px 22px rgba(31, 144, 231, 0.12); */
+    border-radius: 50%;
     }
   
     .item img {

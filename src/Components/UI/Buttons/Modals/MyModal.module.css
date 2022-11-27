@@ -33,3 +33,14 @@ background-size: cover;
     justify-content: center;
     align-items: center;
 }
+.myModalContent:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 1px dashed salmon;
+    border-radius: 5px;
+    }

@@ -10,7 +10,7 @@ const Player = ({songs}) => {
   //   const itemTags = song.tags.split(', '); 
   //   return tags.every(t => itemTags.includes('audio')); 
   // }); 
-  const oneSing = songs.every(elem => elem.length >>> 0);
+  // const oneSing = songs.every(elem => elem.length >>> 0);
 
     const audioList = useMemo (() => {
     const audiosongs1 = songs.map((song) => {
@@ -47,31 +47,41 @@ const Player = ({songs}) => {
  
     }, [])
  
-//  console.log("audioList", audioList)
+ console.log("audioList", audioList)
 //  const oneSing =  useEffect(() => {
-//   Array.from(audioList);
-//   // console.log("oneSing", oneSing)
+
 // }, [])
+
+const audCommon =  useMemo(() => {
 const mapUsersByFields = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
   u2[f1] = u1[f1];
   return u2;
 }, {}));
 console.log(mapUsersByFields(["name", "audio1", "audio2", "audio3"]));
+const aud1 = mapUsersByFields(["name", "audio1"]);
+const aud2 = mapUsersByFields(["name", "audio2"]);
+const aud3 = mapUsersByFields(["name", "audio3"]);
+
+ 
+
+
+ 
+return [...aud1, ...aud2, ...aud3].filter(e => e.src !== '');
+}, [])
+console.log('audCommon ', audCommon );
+
 
 
   const musicTracks = [
-    {
-      name: "Memories",
-      src: "https://www.bensound.com/bensound-music/bensound-memories.mp3"
+   {
+        "name": "Виталий Подземный",
+        "src": "https://drive.google.com/uc?export=download&id=1g9CMdR2ZVnYsyHYpN8jkt2Ax0hYDVsn0",
+   
     },
     {
-      name: "Creative Minds",
-      src: "https://drive.google.com/uc?export=download&id=17A1Pdk7cHrYlT79ISQYdFUxkjqHfq1Su"
-    },
-    {
-      name: "Acoustic Breeze",
-      src: "https://www.bensound.com/bensound-music/bensound-acousticbreeze.mp3",
-      
+        "name": "Серж Левинс",
+        "src": "https://drive.google.com/uc?export=download&id=12d_H0sN7jps6JzP4XPyxRVAn7_LxflIE",
+        
     }
 ]
 console.log("musicTracks ", musicTracks)
