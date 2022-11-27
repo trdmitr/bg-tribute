@@ -47,7 +47,7 @@ const Player = ({songs}) => {
  
     }, [])
  
- console.log("audioList", audioList)
+//  console.log("audioList", audioList)
 //  const oneSing =  useEffect(() => {
 
 // }, [])
@@ -57,7 +57,7 @@ const mapUsersByFields = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
   u2[f1] = u1[f1];
   return u2;
 }, {}));
-console.log(mapUsersByFields(["name", "audio1", "audio2", "audio3"]));
+// console.log(mapUsersByFields(["name", "audio1", "audio2", "audio3"]));
 const aud1 = mapUsersByFields(["name", "audio1"]);
 const aud2 = mapUsersByFields(["name", "audio2"]);
 const aud3 = mapUsersByFields(["name", "audio3"]);
@@ -68,23 +68,93 @@ const aud3 = mapUsersByFields(["name", "audio3"]);
  
 return [...aud1, ...aud2, ...aud3].filter(e => e.src !== '');
 }, [])
-console.log('audCommon ', audCommon );
+// console.log('audCommon ', audCommon );
 
 
 
   const musicTracks = [
-   {
+    {
         "name": "Виталий Подземный",
-        "src": "https://drive.google.com/uc?export=download&id=1g9CMdR2ZVnYsyHYpN8jkt2Ax0hYDVsn0",
-   
+        "src": "https://drive.google.com/uc?export=download&id=1g9CMdR2ZVnYsyHYpN8jkt2Ax0hYDVsn0"
     },
     {
         "name": "Серж Левинс",
-        "src": "https://drive.google.com/uc?export=download&id=12d_H0sN7jps6JzP4XPyxRVAn7_LxflIE",
-        
+        "src": "https://drive.google.com/uc?export=download&id=12d_H0sN7jps6JzP4XPyxRVAn7_LxflIE"
+    },
+    {
+        "name": "Дворовый стиль",
+        "src": "https://drive.google.com/uc?export=download&id=13g_-YPDnrgdnIJCPqwK0wB1g17Nx01hU"
+    },
+    {
+        "name": "Николай Зайцев",
+        "src": "https://drive.google.com/uc?export=download&id=1b9gYg5fTJ4_tRIEmrT0tJkUICkL4GydF"
+    },
+    {
+        "name": "Василий Рыжкин",
+        "src": " https://drive.google.com/uc?export=download&id=1ch5Z5wnqIYfBNh6RKEIXvurd2-t4V2ZF"
+    },
+    {
+        "name": "Юрий Молчанов",
+        "src": "https://drive.google.com/uc?export=download&id=1OUnunZbwiW2mBB5CCyAfAXEee-lblxs7"
+    },
+    {
+        "name": "Shp1onkA",
+        "src": "https://drive.google.com/uc?export=download&id=1DCuuJY3wbumMIuYlM6XmrgBuH5pUxjx3"
+    },
+    {
+        "name": "DackFax",
+        "src": "https://drive.google.com/uc?export=download&id=1THuiuYTynB2s9QeLEe1QJozr8aeWBv53"
+    },
+    {
+        "name": "ENA_WD",
+        "src": "https://drive.google.com/uc?export=download&id=1MtEathN2ONYK8PbEpsQabr0hTXMfrfXR"
+    },
+    {
+        "name": "Жанат Акбулатов",
+        "src": "https://drive.google.com/uc?export=download&id=11FVHULIRG4GNrTfmT_GU_Rf8hBaJHFTv"
+    },
+    {
+        "name": "Влад Ионов",
+        "src": "https://drive.google.com/uc?export=download&id=1hT8dcU8R4cAa0yKUhLZ0VTu4oTUNuq8a"
+    },
+    {
+        "name": "Константин Рубан",
+        "src": " https://drive.google.com/uc?export=download&id=1jH4ryyWnbGkXq5LYFVVefKSxLMaOJsW2"
+    },
+    {
+        "name": "Алексей Недостоев",
+        "src": "https://drive.google.com/uc?export=download&id=1lMizAPyFwKxz77hs3N8ZesEQp6INz_nn"
+    },
+    {
+        "name": "Виталий Подземный",
+        "src": "https://drive.google.com/uc?export=download&id=1s2HYUfbgANCE9dIkY-f_LkqqQN1CdYrM"
+    },
+    {
+        "name": "Юрий Молчанов",
+        "src": "https://drive.google.com/uc?export=download&id=1XEps5GAWfY4gggtzyoiOkpS7hErwhyaD"
+    },
+    {
+        "name": "DackFax",
+        "src": " https://drive.google.com/uc?export=download&id=1988bCJuMNM7eRTehT39kILF2KtfcPz61"
+    },
+    {
+        "name": "Константин Рубан",
+        "src": "https://drive.google.com/uc?export=download&id=1texscNBD7A4nDDH7BuKrzD84-reUhLv6"
+    },
+    {
+        "name": "Виталий Подземный",
+        "src": "https://drive.google.com/uc?export=download&id=1QCbIYuRpmhYyiucHNvfO-lk7dx_NL1jz"
+    },
+    {
+        "name": "Юрий Молчанов",
+        "src": "https://drive.google.com/uc?export=download&id=13fguTy53DlxDOY5BG1-LNVDWDohKUEcc"
+    },
+    {
+        "name": "DackFax",
+        "src": "https://drive.google.com/uc?export=download&id=174_nK8T_dpQiDdMElByOOrWuQT5_cR0O"
     }
 ]
-console.log("musicTracks ", musicTracks)
+// console.log("musicTracks ", musicTracks)
 
 
 const [trackIndex, setTrackIndex] = useState(0);
