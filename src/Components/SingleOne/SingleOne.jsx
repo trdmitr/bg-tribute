@@ -17,14 +17,14 @@ const SingleOne = ({ songs } ) => {
     return songs.filter(songs => songs.id == params.id);
   
 }, [songs])
-console.log("currSings ", currSings)
+// console.log("currSings ", currSings)
 const listContent = useMemo(() => {         
   return  currSings.map((currSing) =>   
  <div className={classes.mediaSong} key={currSing.id}> 
     <img className={classes.mediaImage} src={currSing.photo} width={80} alt={currSing.name} />
     <div className= {classes.headerSong}>
 <h2>{currSing.name}</h2></div>
-<a className={classes.linkTo}  href={currSing.link} target="_blank" rel="noopener noreferrer"> Канал исполнителя </a>
+<a className={[classes.linkTo, currSing.linkTo ? '' : classes.mediaHidden].join(' ')}  href={currSing.linkTo} target="_blank" rel="noopener noreferrer"> Канал исполнителя </a>
 <div className = {[
 classes.audioBlock,
 currSing.audio1 ? '' : classes.mediaHidden].join(' ')

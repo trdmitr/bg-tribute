@@ -43,7 +43,7 @@ useEffect (() => {
     })
     }, [])
     const tributes = Array.from(data);
-    console.log("songError", songError)
+    // console.log("songError", songError)
     // console.log("tributes ", tributes)
        return (
        <Fragment>
